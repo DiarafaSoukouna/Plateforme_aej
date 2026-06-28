@@ -74,17 +74,15 @@ export function TopNav() {
           {navigation.map((item) =>
             item.children ? (
               <DropdownMenu key={item.label}>
-                <DropdownMenuTrigger asChild>
-                  <button
-                    className={cn(
-                      "inline-flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-sidebar-accent",
-                      sectionActive(pathname, item) &&
-                        "bg-sidebar-accent text-sidebar-primary",
-                    )}
-                  >
-                    {item.label}
-                    <ChevronDown className="size-3.5 opacity-70" />
-                  </button>
+                <DropdownMenuTrigger
+                  className={cn(
+                    "inline-flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-sidebar-accent",
+                    sectionActive(pathname, item) &&
+                      "bg-sidebar-accent text-sidebar-primary",
+                  )}
+                >
+                  {item.label}
+                  <ChevronDown className="size-3.5 opacity-70" />
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="start" className="min-w-48">
                   {item.children.map((child) => (
@@ -121,20 +119,18 @@ export function TopNav() {
         <div className="ml-auto flex items-center gap-2">
           {/* Menu utilisateur */}
           <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <button className="flex items-center gap-2 rounded-full px-1.5 py-1 transition-colors hover:bg-sidebar-accent">
-                <Avatar className="size-8">
-                  <AvatarFallback className="bg-sidebar-primary text-sidebar-primary-foreground text-xs font-semibold">
-                    {initials}
-                  </AvatarFallback>
-                </Avatar>
-                <div className="hidden text-left leading-tight md:block">
-                  <p className="text-xs font-semibold">{user?.name}</p>
-                  <p className="text-[10px] text-sidebar-foreground/70">
-                    {user?.role}
-                  </p>
-                </div>
-              </button>
+            <DropdownMenuTrigger className="flex items-center gap-2 rounded-full px-1.5 py-1 transition-colors hover:bg-sidebar-accent">
+              <Avatar className="size-8">
+                <AvatarFallback className="bg-sidebar-primary text-sidebar-primary-foreground text-xs font-semibold">
+                  {initials}
+                </AvatarFallback>
+              </Avatar>
+              <div className="hidden text-left leading-tight md:block">
+                <p className="text-xs font-semibold">{user?.name}</p>
+                <p className="text-[10px] text-sidebar-foreground/70">
+                  {user?.role}
+                </p>
+              </div>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end" className="min-w-48">
               <DropdownMenuLabel>{user?.email}</DropdownMenuLabel>
