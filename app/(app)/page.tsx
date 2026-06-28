@@ -22,10 +22,10 @@ import { formatFCFA, formatNumber } from "@/lib/format"
 
 const kpiIcons = [Users, FolderKanban, Wallet, Briefcase]
 const legendColors = [
-  "oklch(0.52 0.13 150)",
-  "oklch(0.7 0.17 52)",
-  "oklch(0.62 0.1 180)",
-  "oklch(0.6 0.12 25)",
+  "oklch(0.53 0.14 150)",
+  "oklch(0.72 0.17 55)",
+  "oklch(0.64 0.11 130)",
+  "oklch(0.78 0.15 75)",
 ]
 
 export default function DashboardPage() {

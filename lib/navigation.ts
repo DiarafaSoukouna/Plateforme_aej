@@ -85,4 +85,10 @@ export const subNavs: Record<string, NavLeaf[]> = {
     { label: "Suivi de parcours", href: "/suivis/parcours" },
     { label: "Embauches", href: "/suivis/embauches" },
   ],
+  rapport: [
+    { label: "Rapport des jeunes", href: "/rapport/jeunes" },
+    { label: "Rapport de stages", href: "/rapport/stages" },
+    { label: "Rapport de financement", href: "/rapport/financement" },
+    { label: "Rapport matrice projets", href: "/rapport/matrice-projets" },
+  ],
 }

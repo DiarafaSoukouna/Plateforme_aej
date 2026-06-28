@@ -19,18 +19,18 @@ import {
   repartitionAvis,
 } from "@/lib/mock-data"
 
-const GREEN = "oklch(0.52 0.13 150)"
-const ORANGE = "oklch(0.7 0.17 52)"
+const GREEN = "oklch(0.53 0.14 150)"
+const ORANGE = "oklch(0.72 0.17 55)"
 const PIE_COLORS = [
-  "oklch(0.52 0.13 150)",
-  "oklch(0.7 0.17 52)",
-  "oklch(0.62 0.1 180)",
-  "oklch(0.6 0.12 25)",
+  "oklch(0.53 0.14 150)",
+  "oklch(0.72 0.17 55)",
+  "oklch(0.64 0.11 130)",
+  "oklch(0.78 0.15 75)",
 ]
 
 const tooltipStyle = {
   borderRadius: 8,
-  border: "1px solid oklch(0.9 0.01 150)",
+  border: "1px solid oklch(0.91 0.012 150)",
   fontSize: 12,
 }
 

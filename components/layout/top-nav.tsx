@@ -8,6 +8,7 @@ import { useState } from "react"
 import { cn } from "@/lib/utils"
 import { navigation } from "@/lib/navigation"
 import { useAuth } from "@/components/auth-provider"
+import { useSettings } from "@/components/settings-provider"
 import { Button } from "@/components/ui/button"
 import {
   DropdownMenu,
@@ -33,6 +34,7 @@ export function TopNav() {
   const pathname = usePathname()
   const router = useRouter()
   const { user, logout } = useAuth()
+  const { settings } = useSettings()
   const [mobileOpen, setMobileOpen] = useState(false)
 
   function handleLogout() {
@@ -54,15 +56,15 @@ export function TopNav() {
         <Link href="/" className="flex items-center gap-2.5">
           <Image
             src="/icon.png"
-            alt="PDIGSF"
+            alt={settings.appShortName}
             width={36}
             height={36}
             className="rounded-md"
           />
           <div className="hidden flex-col leading-tight sm:flex">
-            <span className="text-sm font-bold">PDIGSF</span>
+            <span className="text-sm font-bold">{settings.appShortName}</span>
             <span className="text-[10px] text-sidebar-foreground/70">
-              Gestion · Suivis · Financements
+              {settings.tagline}
             </span>
           </div>
         </Link>
